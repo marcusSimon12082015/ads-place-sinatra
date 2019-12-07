@@ -1,0 +1,18 @@
+source "https://rubygems.org"
+
+gem 'sinatra'
+gem 'sinatra-partial', require: 'sinatra/partial'
+gem 'sinatra-flash'
+gem 'json'
+gem 'sass'
+gem 'thin'
+gem 'require_all'
+gem 'activerecord','5.2'
+gem 'sinatra-activerecord'
+gem 'rake'
+gem 'bcrypt','3.1.11'
+gem 'shotgun'
+gem 'byebug'
+gem 'tux'
+gem 'sqlite3','~>1.3','< 1.4'
+gem 'carrierwave','~>2.0'
