@@ -72,6 +72,13 @@ body
     }
 }
 
+.login_message
+{
+  background-color: var(--red-color);
+  height: 5rem;
+  color: #fff;
+  text-align: center;
+}
 .content
 {
 

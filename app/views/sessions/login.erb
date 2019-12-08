@@ -1,1 +1,4 @@
+<% if defined?(@message) %>
+  <h1 class="login_message"><%=@message%></h1>
+<% end %>
 <%= erb :'partials/_form', :layout => false, :locals => {:action => "/sessions", :button_text => "Login"}%>
