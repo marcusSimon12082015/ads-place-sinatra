@@ -11,4 +11,6 @@ ActiveRecord::Base.establish_connection(
 require "carrierwave"
 require "carrierwave/orm/activerecord"
 
+require 'sinatra/partial'
+require 'sinatra/flash'
 require_all 'app'
