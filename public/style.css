@@ -1,0 +1,38 @@
+:root
+{
+  --black-color: #0B0c10;
+  --grey-color:#1f2833;
+  --grey-light:#66fcf1;
+  --blue-light:#45a293;
+  --red-color:#cc0000;
+}
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-color:
+}
+
+.content
+{
+
+}
+
+.container
+{
+
+}
