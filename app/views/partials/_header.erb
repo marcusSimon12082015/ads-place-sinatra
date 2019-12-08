@@ -1,0 +1,7 @@
+<ul>
+  <% if current_user.nil? %>
+    <li><a href="/signup">Sign up</a></li>
+  <% else %>
+    <li><a href="#">User Name</a></li>
+  <% end %>
+</ul>
