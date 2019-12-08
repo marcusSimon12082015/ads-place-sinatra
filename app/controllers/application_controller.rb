@@ -16,6 +16,11 @@ class ApplicationController < Sinatra::Base
     set :partial_template_engine => :erb
   end
 
+
+  not_found do
+    erb :'error'
+  end
+
   get '/' do
 
   end
