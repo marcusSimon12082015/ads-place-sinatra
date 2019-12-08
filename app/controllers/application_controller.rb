@@ -1,7 +1,7 @@
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
-  helpers ApplicationHelper, HomeHelper
+  helpers ApplicationHelper, HomeHelper, AdsHelper
   register Sinatra::Flash
 
   APP_ROOT = Pathname.new(File.expand_path('../../../',__FILE__))

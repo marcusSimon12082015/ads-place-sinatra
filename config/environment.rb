@@ -13,4 +13,8 @@ require "carrierwave/orm/activerecord"
 
 require 'sinatra/partial'
 require 'sinatra/flash'
+require './app/helpers/application_helper'
+require './app/helpers/home_helper'
+require './app/helpers/ads_helper'
+require './app/controllers/application_controller'
 require_all 'app'
