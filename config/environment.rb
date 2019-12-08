@@ -13,6 +13,7 @@ require "carrierwave/orm/activerecord"
 
 require 'sinatra/partial'
 require 'sinatra/flash'
+require './app/uploader/images_uploader'
 require './app/helpers/application_helper'
 require './app/helpers/home_helper'
 require './app/helpers/ads_helper'

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_185052) do
     t.integer "condition_id"
     t.integer "category_id"
     t.integer "user_id"
+    t.string "image"
     t.index ["category_id"], name: "index_ads_on_category_id"
     t.index ["condition_id"], name: "index_ads_on_condition_id"
     t.index ["user_id"], name: "index_ads_on_user_id"
