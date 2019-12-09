@@ -22,6 +22,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-
+    if current_user
+      @ads = Ad.where('user_id != ?',current_user)
+    else
+      @ads = Ad.all
+    end
+    erb :index
   end
 end
