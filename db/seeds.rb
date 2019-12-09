@@ -26,8 +26,7 @@ ad1 = Ad.create(
   quantity:1,
   location:"Hawai",
   condition:likeNew,category:bikes,user:marcus,
-  image:""
-)
+  image:File.open(ApplicationController.root + "/public/images/used_bikes.png"))
 
 ad2 = Ad.create(
   description:"Barely used boat!",
@@ -35,7 +34,7 @@ ad2 = Ad.create(
   quantity:1,
   location:"New York",
   condition:used,category:boats,user:marcus,
-  image:""
+  image:File.open(ApplicationController.root + "/public/images/used_boat.png")
 )
 
 ad3 = Ad.create(
@@ -44,6 +43,34 @@ ad3 = Ad.create(
   quantity:1,
   location:"Hawai",
   condition:used,category:bikes,user:marcus,
-  image:""
+  image:File.open(ApplicationController.root + "/public/images/used_bikes2.png")
 )
 marcus.ads << [ad1,ad2,ad3]
+
+ad4 = Ad.create(
+  description:"Wallets of all shapes and sizes!",
+  price:45.0,
+  quantity:5,
+  location:"Washington",
+  condition:newCondition,category:accessories,user:jeff,
+  image:File.open(ApplicationController.root + "/public/images/accessories_1.png"))
+
+ad5 = Ad.create(
+  description:"We got belts for everyone!",
+  price:65.0,
+  quantity:10,
+  location:"Washington",
+  condition:newCondition,category:accessories,user:jeff,
+  image:File.open(ApplicationController.root + "/public/images/accessories_2.png")
+)
+
+ad6 = Ad.create(
+  description:"Come see our watches!",
+  price:20.0,
+  quantity:34,
+  location:"Washington",
+  condition:newCondition,category:accessories,user:jeff,
+  image:File.open(ApplicationController.root + "/public/images/accessories_1.png")
+)
+
+jeff.ads << [ad4,ad5,ad6]
