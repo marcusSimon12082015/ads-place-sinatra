@@ -74,3 +74,38 @@ ad6 = Ad.create(
 )
 
 jeff.ads << [ad4,ad5,ad6]
+
+ad7 = Ad.create(
+  description:"Gym Bike!",
+  price:250.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:likeNew,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/gym_bike.jpg"))
+
+ad8 = Ad.create(
+  description:"Bench press gain muscle",
+  price:150.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:likeNew,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/bench_press_used_2.jpg")
+)
+
+ad9 = Ad.create(
+  description:"Bench press still!",
+  price:200.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:used,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/bench_press_used.jpg")
+)
+
+ad9 = Ad.create(
+  description:"Selling Treadmill!",
+  price:100.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:used,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/used_treadmill.jpg")
+)
