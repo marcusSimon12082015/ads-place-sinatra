@@ -13,6 +13,18 @@
         <a href="#" class="close">&times;</a>
       </div>
     <% end %>
-    <%= yield %>
+    <div class="main-content">
+      <nav class="sidebar">
+        <h1>Categories</h1>
+        <ul>
+          <% @categories.each do |category| %>
+            <li><a href="/category/<%= category.id %>"><%= category.category_name %></a></li>
+          <% end %>
+        </ul>
+      </nav>
+      <main class="main-view">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

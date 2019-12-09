@@ -4,6 +4,12 @@ class ApplicationController < Sinatra::Base
   helpers ApplicationHelper, HomeHelper, AdsHelper
   register Sinatra::Flash
 
+  #always set categories before every action except signup and login
+  before do
+    if request.request_method == "GET" && !request.path.match(/^(\/{1}|(\/\bcategory\b\/\d+))$/).nil?
+        @categories = Category.all
+    end
+  end
   APP_ROOT = Pathname.new(File.expand_path('../../../',__FILE__))
 
   configure do
@@ -27,6 +33,6 @@ class ApplicationController < Sinatra::Base
     else
       @ads = Ad.all
     end
-    erb :index
+    erb :index, :layout => :"home_category_layout"
   end
 end
