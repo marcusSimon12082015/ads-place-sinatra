@@ -101,7 +101,7 @@ ad9 = Ad.create(
   image:File.open(ApplicationController.root + "/public/images/bench_press_used.jpg")
 )
 
-ad9 = Ad.create(
+ad10 = Ad.create(
   description:"Selling Treadmill!",
   price:100.0,
   quantity:1,
@@ -109,3 +109,23 @@ ad9 = Ad.create(
   condition:used,category:exercise,user:greg,
   image:File.open(ApplicationController.root + "/public/images/used_treadmill.jpg")
 )
+
+ad11 = Ad.create(
+  description:"My Old running shoes size 10!",
+  price:10.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:used,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/exercise1.jpg")
+)
+
+ad12 = Ad.create(
+  description:"My old running shoes size 11!",
+  price:5.0,
+  quantity:1,
+  location:"Los Angeles",
+  condition:used,category:exercise,user:greg,
+  image:File.open(ApplicationController.root + "/public/images/exercise2.jpg")
+)
+
+greg.ads << [ad7,ad8,ad9,ad10,ad11,ad12]
