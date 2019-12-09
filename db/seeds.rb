@@ -16,8 +16,8 @@ bikes = Category.create(category_name:"Bikes")
 
 #create user
 marcus = User.create(email:"marcus@email.com",password:"11111111")
-jeff = User.create(email:"marcus@email.com",password:"22222222")
-greg = User.create(email:"marcus@email.com",password:"22222222")
+jeff = User.create(email:"jeff@email.com",password:"22222222")
+greg = User.create(email:"greg@email.com",password:"22222222")
 
 #create ads
 ad1 = Ad.create(
@@ -125,7 +125,7 @@ ad12 = Ad.create(
   quantity:1,
   location:"Los Angeles",
   condition:used,category:exercise,user:greg,
-  image:File.open(ApplicationController.root + "/public/images/exercise2.jpg")
+  image:File.open(ApplicationController.root + "/public/images/exercise2.png")
 )
 
 greg.ads << [ad7,ad8,ad9,ad10,ad11,ad12]
