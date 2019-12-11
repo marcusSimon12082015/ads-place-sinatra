@@ -188,10 +188,21 @@ body
 }
 .content
 {
-  
+  border: 2px solid var(--grey-color);
+  border-radius:25px;
+  padding:2.5rem;
+  font-size:150%;
+  flex:0.5;
+  background-color: #fff;
+  box-shadow:0 8px 6px var(--grey-color);
 }
 
 .container
 {
-
+  max-width: 600rem;
+  margin:8rem auto;
+  min-height: 50rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
