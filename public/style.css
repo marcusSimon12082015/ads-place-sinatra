@@ -206,3 +206,30 @@ body
   align-items:center;
   justify-content:center;
 }
+input
+{
+  width:100%;
+  height:3.5rem;
+}
+
+select
+{
+  width:100%;
+  height:3.5rem;
+}
+
+/*Buttons*/
+.form_button
+{
+  border-radius: 25px;
+  cursor:pointer;
+  width: 50%;
+  height: 7rem;
+  background-color: var(--blue-light);
+  color:#fff;
+  padding:.75rem;
+  font-size: 200%;
+  margin-top: 1.5rem;
+}
+
+/*end Buttons*/
