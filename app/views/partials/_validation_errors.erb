@@ -1,0 +1,9 @@
+<% if !!model && model.errors.any? %>
+  <div class="validation_errors">
+    <ul>
+      <% model.errors.each do |attribute,message|%>
+        <li><%=attribute.capitalize%> <%=message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
