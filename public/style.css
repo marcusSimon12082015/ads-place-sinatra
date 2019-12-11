@@ -233,3 +233,31 @@ select
 }
 
 /*end Buttons*/
+
+.action_button_panel
+{
+  padding:1rem 0 1.5rem 0;
+  &__inner
+  {
+    display:inline-block;
+    height:4rem;
+    button,a
+    {
+      cursor:pointer;
+      color:#fff;
+      font-size:140%;
+      margin-top:1.5rem;
+      text-decoration: none;
+      background-color: var(--blue-light);
+      padding:.75rem;
+      border:none;
+      &:hover
+      {
+        background-color:#fff;
+        color:var(--blue-light);
+      }
+    }
+  }
+}
+
+/*Flash messages*/
