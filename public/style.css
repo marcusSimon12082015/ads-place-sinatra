@@ -166,19 +166,6 @@ body
     }
 }
 
-.error_box
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 8rem auto;
-    max-width: 50%;
-    h1
-    {
-      font-size: 500%;
-    }
-}
-
 .login_message
 {
   background-color: var(--red-color);
@@ -286,3 +273,39 @@ select
   }
 }
 /************************************************************************/
+.login_message
+{
+  background-color: var(--red-color);
+  height:5rem;
+  color:#fff;
+  text-align: center;
+}
+
+/*validation messages*/
+.validation_errors
+{
+  color:#fff;
+  font-size:200%;
+  ul
+  {
+      list-style-type: circle;
+  }
+  li
+  {
+    background-color: var(--red-color);
+    display:block;
+    padding:.75rem;
+  }
+}
+.error_box
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem auto;
+    max-width: 50%;
+    h1
+    {
+      font-size: 500%;
+    }
+}
