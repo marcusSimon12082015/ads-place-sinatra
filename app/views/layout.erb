@@ -13,7 +13,7 @@
         <a href="#" class="close">&times;</a>
       </div>
     <% end %>
-    <%=erb :'partials/_validation_errors', :layout => false, :locals => {:model => @user}
+    <%=erb :'partials/_validation_errors', :layout => false, :locals => {:model => @user} %>
     <%= yield %>
   </body>
 </html>
