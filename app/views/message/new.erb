@@ -1,0 +1,18 @@
+<%= erb :'partials/_validation_errors', :layout => false, :locals => {:model => @message } %>
+<div class="container">
+  <div class="content">
+    <h1>Create a new Message</h1>
+    <form action="/message" method="post">
+      <input type="hidden" name="ad_id" value="<%=@ad_id%>">
+      <label for="message_text">Text: </label>
+      <input type="text" name="message[text]" id="message_text" value="<%=@message.text if !@message.nil?%>" />
+      <label for="message_sender_name">Your Name: </label>
+      <input type="text" name="message[sender_name]" id="message_sender_name" value="<%=@message.sender_name if !@message.nil?%>" />
+      <label for="message_telephone_number">Telephone number: </label>
+      <input type="text" name="message[telephone_number]" id="message_telephone_number" value="<%=@message.telephone_number if !@message.nil?%>" />
+      <label for="message_email">Email: </label>
+      <input type="text" name="message[email]" id="message_email" value="<%=@message.email if !@message.nil?%>" />
+      <input type="submit" name="submit" value="Send Message" class="form_button">
+    </form>
+  </div>
+</div> 
