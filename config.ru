@@ -9,9 +9,13 @@ CarrierWave.configure do |config|
 end
 
 Sass::Plugin.options[:style] = :compressed
+use Sass::Plugin::Rack
 
 use Rack::MethodOverride
 use RegistrationController
 use SessionsController
 use CategoryController
+use UsersController
+use MessageController
+use AdsController
 run ApplicationController
