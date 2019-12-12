@@ -24,7 +24,18 @@
         <% else %>
         <option value="<%=category.id%>"><%=category.category_name%></option>
         <% end %>
+      <% end %>
     </select>
-    
+    <label for="condition_id">Condition: </label>
+    <select name="ad[condition_id]">
+      <% conditions.each do |condition| %>
+        <% if !ad.nil? && ad.condition.id == condition.id %>
+          <option value="<%=condition.id%>" selected><%=condition.condition_name%></option>
+        <% else %>
+        <option value="<%=condition.id%>"><%=condition.condition_name%></option>
+        <% end %>
+      <% end %>
+    </select>
+        
   </div>
 </div>
