@@ -12,7 +12,7 @@
       <p>Category: <%=@ad.category.category_name%></p>
       <p>Seller: <%=@ad.user.email%></p>
       <% if !adOwner(@ad.user) %>
-
+        <a class="form_button" href="/message/<%=@ad.id%>">Send a message to Seller</a>
       <% end %>
     </div>
   </div>
