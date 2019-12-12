@@ -11,4 +11,7 @@ end
 Sass::Plugin.options[:style] = :compressed
 
 use Rack::MethodOverride
+use RegistrationController
+use SessionsController
+use CategoryController
 run ApplicationController
