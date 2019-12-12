@@ -1,0 +1,8 @@
+<div class="main-view">
+  <div class="main-view__user-profile">
+    <h1><%=current_user.email%></h1>
+    <h2>My Ads</h2>
+    <a href="/ad/new" class="form_button">Create New Add</a>
+  </div>
+  <%=erb :'partials/_list', :layout => false, :locals => {:collection => current_user.ads } %>
+</div>
