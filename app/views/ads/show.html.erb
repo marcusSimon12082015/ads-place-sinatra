@@ -1,0 +1,19 @@
+<div class="main-content">
+  <div class="sidebar">
+    <img src="<%=@ad.image.url.to_s%>">
+  </div>
+  <div class="main-view">
+    <div class="main-view__details">
+      <h1>Description: <%=@ad.description %></h1>
+      <p>Price: <%=@ad.price%></p>
+      <p>Quantity: <%=@ad.quantity%></p>
+      <p>Location: <%=@ad.location%></p>
+      <p>Condition: <%=@ad.condition.condition_name%></p>
+      <p>Category: <%=@ad.category.category_name%></p>
+      <p>Seller: <%=@ad.user.email%></p>
+      <% if !adOwner(@ad.user) %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
