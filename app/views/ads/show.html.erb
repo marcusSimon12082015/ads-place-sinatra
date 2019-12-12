@@ -17,3 +17,21 @@
     </div>
   </div>
 </div>
+<% if adOwner(@ad.user) && @ad.messages.count > 0 %>
+  <div class="main-view__messages">
+    <% @ad.messages.each do |message| %>
+      <p class="main-view__messages-header"><%=message.sender_name%> - <%=message.email%></p>
+      <p><%=message.telephone_number %></p>
+      <p><%=message.text%></p>
+      <div class="action_button_panel">
+        <div class="action_button_panel__inner">
+          <form action="/message/<%=message.id%>" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="ad_id" value="<%=@ad.id%>">
+            <button type="submit" class="action_button">Delete</button>
+          </form>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
