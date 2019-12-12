@@ -8,6 +8,8 @@
       <form action="/ads/<%=ad.id%>" method="post" enctype="multipart/form-data>
       <input type="hidden" name="_method" value="PUT">
     <% end %>
+    <label for="description">Description: </label>
+    <input type="text" name="ad[description]" id="description" value="<%=ad.description if !ad.nil?%>" />
     
   </div>
 </div>
