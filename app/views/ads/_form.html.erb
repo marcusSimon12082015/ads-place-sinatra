@@ -36,6 +36,13 @@
         <% end %>
       <% end %>
     </select>
-        
+    <% if !ad.nil? && ad.image? %>
+      <label for="image"><%=ad.image.file.filename%></label>
+    <% else %>
+      <label for="image">Upload Image: </label>
+    <% end %>
+    <input type="file" name="ad[image]">
+    <input type="submit" name="submit" value="<%=button_text%>" class="form_button">
+  </form>
   </div>
 </div>
