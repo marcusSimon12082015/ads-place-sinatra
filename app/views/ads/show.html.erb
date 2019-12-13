@@ -11,13 +11,13 @@
       <p>Condition: <%=@ad.condition.condition_name%></p>
       <p>Category: <%=@ad.category.category_name%></p>
       <p>Seller: <%=@ad.user.email%></p>
-      <% if !adOwner(@ad.user) %>
-        <a class="form_button" href="/message/<%=@ad.id%>">Send a message to Seller</a>
+      <% if !adOwner?(@ad.user) %>
+        <a class="form_button" href="/message/<%=@ad.id%>/new">Send a message to Seller</a>
       <% end %>
     </div>
   </div>
 </div>
-<% if adOwner(@ad.user) && @ad.messages.count > 0 %>
+<% if adOwner?(@ad.user) && @ad.messages.count > 0 %>
   <div class="main-view__messages">
     <% @ad.messages.each do |message| %>
       <p class="main-view__messages-header"><%=message.sender_name%> - <%=message.email%></p>
