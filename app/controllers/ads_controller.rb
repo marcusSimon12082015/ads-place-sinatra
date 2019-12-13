@@ -55,7 +55,6 @@ class AdsController < ApplicationController
   end
   #update
   put '/ads/:id' do
-    byebug
     @ad = Ad.find_by(id:params[:id])
     if !@ad.nil?
       if @ad.update(params[:ad])
