@@ -11,10 +11,11 @@ class MessageController < ApplicationController
       @ad = Ad.find_by(id:params[:ad_id])
       @ad.messages << @message
       @message.ad = @ad
+      redirect "/ad/#{params[:ad_id]}"
     else
       @ad_id = params[:ad_id]
       erb :'message/new'
-    end 
+    end
   end
 
   delete '/message/:id' do
