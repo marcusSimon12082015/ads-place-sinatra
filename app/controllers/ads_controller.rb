@@ -69,6 +69,15 @@ class AdsController < ApplicationController
       flash[:error] = "Record Not Found!"
       redirect request.env['HTTP_REFERER']
     end
+  end
+  #delete
+  delete '/ads/:id' do
+    @ad = Ad.destroy(params[:id])
+    if @ad.destroyed?
+      flash[:notice] = "Ad was deleted!"
+    else
+      flash[:error] = "Ad was not deleted!"
+    end
+    redirect request.env['HTTP_REFERER']
   end 
-
 end
