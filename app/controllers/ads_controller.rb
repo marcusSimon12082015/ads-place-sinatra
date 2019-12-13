@@ -55,9 +55,10 @@ class AdsController < ApplicationController
   end
   #update
   put '/ads/:id' do
+    byebug
     @ad = Ad.find_by(id:params[:id])
     if !@ad.nil?
-      if @ad.update(params[:id])
+      if @ad.update(params[:ad])
         flash[:notice] = "Ad Updated!"
         redirect "/ad/#{@ad.id}"
       else
@@ -79,5 +80,5 @@ class AdsController < ApplicationController
       flash[:error] = "Ad was not deleted!"
     end
     redirect request.env['HTTP_REFERER']
-  end 
+  end
 end
