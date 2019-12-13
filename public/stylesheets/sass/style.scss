@@ -2,7 +2,7 @@
 {
   --black-color: #0B0c10;
   --grey-color:#1f2833;
-  --grey-light:#66fcf1;
+  --grey-light:#c5c6c7;
   --blue-light:#45a293;
   --red-color:#cc0000;
 }
@@ -60,7 +60,7 @@ body
   justify-content: space-between;
   h1
   {
-      text-align: center;;
+      text-align: center;
   }
   ul
   {
@@ -82,11 +82,11 @@ body
         color:#d3d3d3;
       }
     }
-    img
-    {
-      height: 400px;
-      width:550px;
-    }
+  }
+  img
+  {
+    height: 400px;
+    width:550px;
   }
 }
 .main-content
