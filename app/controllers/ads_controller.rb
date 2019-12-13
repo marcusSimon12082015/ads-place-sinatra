@@ -40,5 +40,35 @@ class AdsController < ApplicationController
   end
 
   #create
-  
+  post '/ads' do
+    @ad = Ad.create(params[:ad])
+    if @ad.save
+      flash[:notice] = "Ad saved!"
+      current_user.ads << @ad
+      redirect to("/ad/#{@ad.id}")
+    else
+      @categories = Category.all
+      @conditions = Condition.all
+      @action = "new"
+      erb :'ads/new.html'
+    end
+  end
+  #update
+  put '/ads/:id' do
+    @ad = Ad.find_by(id:params[:id])
+    if !@ad.nil?
+      if @ad.update(params[:id])
+        flash[:notice] = "Ad Updated!"
+        redirect "/ad/#{@ad.id}"
+      else
+        @categories = Category.all
+        @conditions = Condition.all
+        erb :"ads/edit.html"
+      end
+    else
+      flash[:error] = "Record Not Found!"
+      redirect request.env['HTTP_REFERER']
+    end
+  end 
+
 end
