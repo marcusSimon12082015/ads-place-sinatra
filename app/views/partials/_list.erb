@@ -3,16 +3,24 @@
     <% collection.each do |item| %>
       <div class="ad_content">
         <div>
-          <img class="ad_image" src="">
+          <img class="ad_image" src=<%=displayAdsImage(item)%>>
         </div>
-        <p><a href="#"><%=item.description%></a></p>
-        <div class="action_button_panel__inner">
-
+        <p><a href="/ad/<%=item.id%>"><%=item.description%></a></p>
+        <% if adOwner?(item.user) %>
+        <div class="action_button_panel">
+          <div class="action_button_panel__inner">
+            <form action="/ads/<%=item.id%>" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <button type="submit" class="action_button">Delete</button>
+            </form>
+          </div>
+          <div class="action_button_panel__inner">
+            <a href="/ad/<%=item.id%>/edit">Edit</a>
+          </div>
         </div>
-        <div class="action_button_panel__inner">
-
-        </div>
-  </div>
+      <% end %>
+    </div>
+    <% end %>
   <% else %>
     <h1>No Matches Found</h1>
   <% end %>
