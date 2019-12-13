@@ -1,4 +1,6 @@
 class Ad < ActiveRecord::Base
+  mount_uploader :image, ImagesUploader
+  
   belongs_to :user
   belongs_to :category
   belongs_to :condition
@@ -10,6 +12,6 @@ class Ad < ActiveRecord::Base
   validates :quantity, presence: true
   validates :location, presence: true
   validates :category, presence: true
-  validates :condition, presence: true 
+  validates :condition, presence: true
   #############################################################
 end
